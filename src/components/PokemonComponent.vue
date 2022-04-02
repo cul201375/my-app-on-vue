@@ -95,6 +95,7 @@ export default {
   created() {},
   methods: {
     getPokemon() {
+     this.q = this.q.toLowerCase();
       axios
         .get("https://pokeapi.co/api/v2/pokemon/" + this.q)
         .then((response) => {
